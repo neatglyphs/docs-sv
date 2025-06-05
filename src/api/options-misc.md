@@ -4,7 +4,7 @@
 
 Explicitly declare a display name for the component.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface ComponentOptions {
@@ -12,7 +12,7 @@ Explicitly declare a display name for the component.
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   The name of a component is used for the following:
 
@@ -36,7 +36,7 @@ Explicitly declare a display name for the component.
 
 Controls whether the default component attribute fallthrough behavior should be enabled.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface ComponentOptions {
@@ -44,11 +44,11 @@ Controls whether the default component attribute fallthrough behavior should be 
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   By default, parent scope attribute bindings that are not recognized as props will "fallthrough". This means that when we have a single-root component, these bindings will be applied to the root element of the child component as normal HTML attributes. When authoring a component that wraps a target element or another component, this may not always be the desired behavior. By setting `inheritAttrs` to `false`, this default behavior can be disabled. The attributes are available via the `$attrs` instance property and can be explicitly bound to a non-root element using `v-bind`.
 
-- **Example**
+- **Exempel**
 
   <div class="options-api">
 
@@ -101,7 +101,7 @@ Controls whether the default component attribute fallthrough behavior should be 
 
   </div>
 
-- **See also**
+- **Se även**
 
   - [Fallthrough Attributes](/guide/components/attrs)
   <div class="composition-api">
@@ -113,7 +113,7 @@ Controls whether the default component attribute fallthrough behavior should be 
 
 An object that registers components to be made available to the component instance.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface ComponentOptions {
@@ -121,7 +121,7 @@ An object that registers components to be made available to the component instan
   }
   ```
 
-- **Example**
+- **Exempel**
 
   ```js
   import Foo from './Foo.vue'
@@ -137,13 +137,13 @@ An object that registers components to be made available to the component instan
   }
   ```
 
-- **See also** [Component Registration](/guide/components/registration)
+- **Se även** [Component Registration](/guide/components/registration)
 
 ## directives {#directives}
 
 An object that registers directives to be made available to the component instance.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface ComponentOptions {
@@ -151,7 +151,7 @@ An object that registers directives to be made available to the component instan
   }
   ```
 
-- **Example**
+- **Exempel**
 
   ```js
   export default {
@@ -170,4 +170,4 @@ An object that registers directives to be made available to the component instan
   <input v-focus>
   ```
 
-- **See also** [Custom Directives](/guide/reusability/custom-directives)
+- **Se även** [Custom Directives](/guide/reusability/custom-directives)

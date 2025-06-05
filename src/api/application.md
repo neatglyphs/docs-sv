@@ -4,17 +4,17 @@
 
 Creates an application instance.
 
-- **Type**
+- **Typ**
 
   ```ts
   function createApp(rootComponent: Component, rootProps?: object): App
   ```
 
-- **Details**
+- **Detaljer**
 
   The first argument is the root component. The second optional argument is the props to be passed to the root component.
 
-- **Example**
+- **Exempel**
 
   With inline root component:
 
@@ -35,7 +35,7 @@ Creates an application instance.
   const app = createApp(App)
   ```
 
-- **See also** [Guide - Creating a Vue Application](/guide/essentials/application)
+- **Se även** [Guide - Creating a Vue Application](/guide/essentials/application)
 
 ## createSSRApp() {#createssrapp}
 
@@ -45,7 +45,7 @@ Creates an application instance in [SSR Hydration](/guide/scaling-up/ssr#client-
 
 Mounts the application instance in a container element.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -53,7 +53,7 @@ Mounts the application instance in a container element.
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   The argument can either be an actual DOM element or a CSS selector (the first matched element will be used). Returns the root component instance.
 
@@ -63,7 +63,7 @@ Mounts the application instance in a container element.
 
   For each app instance, `mount()` can only be called once.
 
-- **Example**
+- **Exempel**
 
   ```js
   import { createApp } from 'vue'
@@ -82,7 +82,7 @@ Mounts the application instance in a container element.
 
 Unmounts a mounted application instance, triggering the unmount lifecycle hooks for all components in the application's component tree.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -94,7 +94,7 @@ Unmounts a mounted application instance, triggering the unmount lifecycle hooks 
 
 Registers a callback to be called when the app is unmounted.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -106,7 +106,7 @@ Registers a callback to be called when the app is unmounted.
 
 Registers a global component if passing both a name string and a component definition, or retrieves an already registered one if only the name is passed.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -115,7 +115,7 @@ Registers a global component if passing both a name string and a component defin
   }
   ```
 
-- **Example**
+- **Exempel**
 
   ```js
   import { createApp } from 'vue'
@@ -131,13 +131,13 @@ Registers a global component if passing both a name string and a component defin
   const MyComponent = app.component('MyComponent')
   ```
 
-- **See also** [Component Registration](/guide/components/registration)
+- **Se även** [Component Registration](/guide/components/registration)
 
 ## app.directive() {#app-directive}
 
 Registers a global custom directive if passing both a name string and a directive definition, or retrieves an already registered one if only the name is passed.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -146,7 +146,7 @@ Registers a global custom directive if passing both a name string and a directiv
   }
   ```
 
-- **Example**
+- **Exempel**
 
   ```js
   import { createApp } from 'vue'
@@ -169,13 +169,13 @@ Registers a global custom directive if passing both a name string and a directiv
   const myDirective = app.directive('myDirective')
   ```
 
-- **See also** [Custom Directives](/guide/reusability/custom-directives)
+- **Se även** [Custom Directives](/guide/reusability/custom-directives)
 
 ## app.use() {#app-use}
 
 Installs a [plugin](/guide/reusability/plugins).
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -183,7 +183,7 @@ Installs a [plugin](/guide/reusability/plugins).
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   Expects the plugin as the first argument, and optional plugin options as the second argument.
 
@@ -191,7 +191,7 @@ Installs a [plugin](/guide/reusability/plugins).
 
   When `app.use()` is called on the same plugin multiple times, the plugin will be installed only once.
 
-- **Example**
+- **Exempel**
 
   ```js
   import { createApp } from 'vue'
@@ -204,7 +204,7 @@ Installs a [plugin](/guide/reusability/plugins).
   app.use(MyPlugin)
   ```
 
-- **See also** [Plugins](/guide/reusability/plugins)
+- **Se även** [Plugins](/guide/reusability/plugins)
 
 ## app.mixin() {#app-mixin}
 
@@ -216,7 +216,7 @@ Mixins are supported in Vue 3 mainly for backwards compatibility, due to their w
 For logic reuse, prefer [Composables](/guide/reusability/composables) instead.
 :::
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -228,7 +228,7 @@ For logic reuse, prefer [Composables](/guide/reusability/composables) instead.
 
 Provide a value that can be injected in all descendant components within the application.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -236,11 +236,11 @@ Provide a value that can be injected in all descendant components within the app
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   Expects the injection key as the first argument, and the provided value as the second. Returns the application instance itself.
 
-- **Example**
+- **Exempel**
 
   ```js
   import { createApp } from 'vue'
@@ -278,7 +278,7 @@ Provide a value that can be injected in all descendant components within the app
 
   </div>
 
-- **See also**
+- **Se även**
   - [Provide / Inject](/guide/components/provide-inject)
   - [App-level Provide](/guide/components/provide-inject#app-level-provide)
   - [app.runWithContext()](#app-runwithcontext)
@@ -289,7 +289,7 @@ Provide a value that can be injected in all descendant components within the app
 
 Execute a callback with the current app as injection context.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -297,11 +297,11 @@ Execute a callback with the current app as injection context.
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   Expects a callback function and runs the callback immediately. During the synchronous call of the callback, `inject()` calls are able to look up injections from the values provided by the current app, even when there is no current active component instance. The return value of the callback will also be returned.
 
-- **Example**
+- **Exempel**
 
   ```js
   import { inject } from 'vue'
@@ -319,7 +319,7 @@ Execute a callback with the current app as injection context.
 
 Provides the version of Vue that the application was created with. This is useful inside [plugins](/guide/reusability/plugins), where you might need conditional logic based on different Vue versions.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface App {
@@ -327,7 +327,7 @@ Provides the version of Vue that the application was created with. This is usefu
   }
   ```
 
-- **Example**
+- **Exempel**
 
   Performing a version check inside a plugin:
 
@@ -342,7 +342,7 @@ Provides the version of Vue that the application was created with. This is usefu
   }
   ```
 
-- **See also** [Global API - version](/api/general#version)
+- **Se även** [Global API - version](/api/general#version)
 
 ## app.config {#app-config}
 
@@ -360,7 +360,7 @@ console.log(app.config)
 
 Assign a global handler for uncaught errors propagating from within the application.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface AppConfig {
@@ -374,7 +374,7 @@ Assign a global handler for uncaught errors propagating from within the applicat
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   The error handler receives three arguments: the error, the component instance that triggered the error, and an information string specifying the error source type.
 
@@ -392,7 +392,7 @@ Assign a global handler for uncaught errors propagating from within the applicat
   In production, the 3rd argument (`info`) will be a shortened code instead of the full information string. You can find the code to string mapping in the [Production Error Code Reference](/error-reference/#runtime-errors).
   :::
 
-- **Example**
+- **Exempel**
 
   ```js
   app.config.errorHandler = (err, instance, info) => {
@@ -404,7 +404,7 @@ Assign a global handler for uncaught errors propagating from within the applicat
 
 Assign a custom handler for runtime warnings from Vue.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface AppConfig {
@@ -416,7 +416,7 @@ Assign a custom handler for runtime warnings from Vue.
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   The warning handler receives the warning message as the first argument, the source component instance as the second argument, and a component trace string as the third.
 
@@ -426,7 +426,7 @@ Assign a custom handler for runtime warnings from Vue.
   Warnings only work during development, so this config is ignored in production mode.
   :::
 
-- **Example**
+- **Exempel**
 
   ```js
   app.config.warnHandler = (msg, instance, trace) => {
@@ -440,7 +440,7 @@ Set this to `true` to enable component init, compile, render and patch performan
 
 - **Type:** `boolean`
 
-- **See also** [Guide - Performance](/guide/best-practices/performance)
+- **Se även** [Guide - Performance](/guide/best-practices/performance)
 
 ## app.config.compilerOptions {#app-config-compileroptions}
 
@@ -460,13 +460,13 @@ Specifies a check method to recognize native custom elements.
 
 - **Type:** `(tag: string) => boolean`
 
-- **Details**
+- **Detaljer**
 
   Should return `true` if the tag should be treated as a native custom element. For a matched tag, Vue will render it as a native element instead of attempting to resolve it as a Vue component.
 
   Native HTML and SVG tags don't need to be matched in this function - Vue's parser recognizes them automatically.
 
-- **Example**
+- **Exempel**
 
   ```js
   // treat all tags starting with 'ion-' as custom elements
@@ -475,7 +475,7 @@ Specifies a check method to recognize native custom elements.
   }
   ```
 
-- **See also** [Vue and Web Components](/guide/extras/web-components)
+- **Se även** [Vue and Web Components](/guide/extras/web-components)
 
 ### app.config.compilerOptions.whitespace {#app-config-compileroptions-whitespace}
 
@@ -483,9 +483,9 @@ Adjusts template whitespace handling behavior.
 
 - **Type:** `'condense' | 'preserve'`
 
-- **Default:** `'condense'`
+- **Standard:** `'condense'`
 
-- **Details**
+- **Detaljer**
 
   Vue removes / condenses whitespace characters in templates to produce more efficient compiled output. The default strategy is "condense", with the following behavior:
 
@@ -495,7 +495,7 @@ Adjusts template whitespace handling behavior.
 
   Setting this option to `'preserve'` will disable (2) and (3).
 
-- **Example**
+- **Exempel**
 
   ```js
   app.config.compilerOptions.whitespace = 'preserve'
@@ -507,13 +507,13 @@ Adjusts the delimiters used for text interpolation within the template.
 
 - **Type:** `[string, string]`
 
-- **Default:** `{{ "['\u007b\u007b', '\u007d\u007d']" }}`
+- **Standard:** `{{ "['\u007b\u007b', '\u007d\u007d']" }}`
 
-- **Details**
+- **Detaljer**
 
   This is typically used to avoid conflicting with server-side frameworks that also use mustache syntax.
 
-- **Example**
+- **Exempel**
 
   ```js
   // Delimiters changed to ES6 template string style
@@ -526,13 +526,13 @@ Adjusts treatment of HTML comments in templates.
 
 - **Type:** `boolean`
 
-- **Default:** `false`
+- **Standard:** `false`
 
-- **Details**
+- **Detaljer**
 
   By default, Vue will remove the comments in production. Setting this option to `true` will force Vue to preserve comments even in production. Comments are always preserved during development. This option is typically used when Vue is used with other libraries that rely on HTML comments.
 
-- **Example**
+- **Exempel**
 
   ```js
   app.config.compilerOptions.comments = true
@@ -542,7 +542,7 @@ Adjusts treatment of HTML comments in templates.
 
 An object that can be used to register global properties that can be accessed on any component instance inside the application.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface AppConfig {
@@ -550,13 +550,13 @@ An object that can be used to register global properties that can be accessed on
   }
   ```
 
-- **Details**
+- **Detaljer**
 
   This is a replacement of Vue 2's `Vue.prototype` which is no longer present in Vue 3. As with anything global, this should be used sparingly.
 
   If a global property conflicts with a component’s own property, the component's own property will have higher priority.
 
-- **Usage**
+- *Användning**
 
   ```js
   app.config.globalProperties.msg = 'hello'
@@ -572,13 +572,13 @@ An object that can be used to register global properties that can be accessed on
   }
   ```
 
-- **See also** [Guide - Augmenting Global Properties](/guide/typescript/options-api#augmenting-global-properties) <sup class="vt-badge ts" />
+- **Se även** [Guide - Augmenting Global Properties](/guide/typescript/options-api#augmenting-global-properties) <sup class="vt-badge ts" />
 
 ## app.config.optionMergeStrategies {#app-config-optionmergestrategies}
 
 An object for defining merging strategies for custom component options.
 
-- **Type**
+- **Typ**
 
   ```ts
   interface AppConfig {
@@ -588,7 +588,7 @@ An object for defining merging strategies for custom component options.
   type OptionMergeFunction = (to: unknown, from: unknown) => any
   ```
 
-- **Details**
+- **Detaljer**
 
   Some plugins / libraries add support for custom component options (by injecting global mixins). These options may require special merging logic when the same option needs to be "merged" from multiple sources (e.g. mixins or component inheritance).
 
@@ -596,7 +596,7 @@ An object for defining merging strategies for custom component options.
 
   The merge strategy function receives the value of that option defined on the parent and child instances as the first and second arguments, respectively.
 
-- **Example**
+- **Exempel**
 
   ```js
   const app = createApp({
@@ -623,7 +623,7 @@ An object for defining merging strategies for custom component options.
   // logs 'Hello Vue'
   ```
 
-- **See also** [Component Instance - `$options`](/api/component-instance#options)
+- **Se även** [Component Instance - `$options`](/api/component-instance#options)
 
 ## app.config.idPrefix <sup class="vt-badge" data-text="3.5+" /> {#app-config-idprefix}
 
@@ -631,9 +631,9 @@ Configure a prefix for all IDs generated via [useId()](/api/composition-api-help
 
 - **Type:** `string`
 
-- **Default:** `undefined`
+- **Standard:** `undefined`
 
-- **Example**
+- **Exempel**
 
   ```js
   app.config.idPrefix = 'myApp'
@@ -651,9 +651,9 @@ Force unhandled errors to be thrown in production mode.
 
 - **Type:** `boolean`
 
-- **Default:** `false`
+- **Standard:** `false`
 
-- **Details**
+- **Detaljer**
 
   By default, errors thrown inside a Vue application but not explicitly handled have different behavior between development and production modes:
 

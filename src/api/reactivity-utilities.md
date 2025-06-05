@@ -4,7 +4,7 @@
 
 Checks if a value is a ref object.
 
-- **Type**
+- **Typ**
 
   ```ts
   function isRef<T>(r: Ref<T> | unknown): r is Ref<T>
@@ -24,13 +24,13 @@ Checks if a value is a ref object.
 
 Returns the inner value if the argument is a ref, otherwise return the argument itself. This is a sugar function for `val = isRef(val) ? val.value : val`.
 
-- **Type**
+- **Typ**
 
   ```ts
   function unref<T>(ref: T | Ref<T>): T
   ```
 
-- **Example**
+- **Exempel**
 
   ```ts
   function useFoo(x: number | Ref<number>) {
@@ -45,7 +45,7 @@ Can be used to normalize values / refs / getters into refs (3.3+).
 
 Can also be used to create a ref for a property on a source reactive object. The created ref is synced with its source property: mutating the source property will update the ref, and vice-versa.
 
-- **Type**
+- **Typ**
 
   ```ts
   // normalization signature (3.3+)
@@ -67,7 +67,7 @@ Can also be used to create a ref for a property on a source reactive object. The
   type ToRef<T> = T extends Ref ? T : Ref<T>
   ```
 
-- **Example**
+- **Exempel**
 
   Normalization signature (3.3+):
 
@@ -140,13 +140,13 @@ Normalizes values / refs / getters to values. This is similar to [unref()](#unre
 
 This can be used in [Composables](/guide/reusability/composables.html) to normalize an argument that can be either a value, a ref, or a getter.
 
-- **Type**
+- **Typ**
 
   ```ts
   function toValue<T>(source: T | Ref<T> | (() => T)): T
   ```
 
-- **Example**
+- **Exempel**
 
   ```js
   toValue(1) //       --> 1
@@ -175,7 +175,7 @@ This can be used in [Composables](/guide/reusability/composables.html) to normal
 
 Converts a reactive object to a plain object where each property of the resulting object is a ref pointing to the corresponding property of the original object. Each individual ref is created using [`toRef()`](#toref).
 
-- **Type**
+- **Typ**
 
   ```ts
   function toRefs<T extends object>(
@@ -187,7 +187,7 @@ Converts a reactive object to a plain object where each property of the resultin
   type ToRef = T extends Ref ? T : Ref<T>
   ```
 
-- **Example**
+- **Exempel**
 
   ```js
   const state = reactive({
@@ -236,7 +236,7 @@ Converts a reactive object to a plain object where each property of the resultin
 
 Checks if an object is a proxy created by [`reactive()`](./reactivity-core#reactive), [`readonly()`](./reactivity-core#readonly), [`shallowReactive()`](./reactivity-advanced#shallowreactive) or [`shallowReadonly()`](./reactivity-advanced#shallowreadonly).
 
-- **Type**
+- **Typ**
 
   ```ts
   function isProxy(value: any): boolean
@@ -246,7 +246,7 @@ Checks if an object is a proxy created by [`reactive()`](./reactivity-core#react
 
 Checks if an object is a proxy created by [`reactive()`](./reactivity-core#reactive) or [`shallowReactive()`](./reactivity-advanced#shallowreactive).
 
-- **Type**
+- **Typ**
 
   ```ts
   function isReactive(value: unknown): boolean
@@ -258,7 +258,7 @@ Checks whether the passed value is a readonly object. The properties of a readon
 
 The proxies created by [`readonly()`](./reactivity-core#readonly) and [`shallowReadonly()`](./reactivity-advanced#shallowreadonly) are both considered readonly, as is a [`computed()`](./reactivity-core#computed) ref without a `set` function.
 
-- **Type**
+- **Typ**
 
   ```ts
   function isReadonly(value: unknown): boolean

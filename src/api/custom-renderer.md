@@ -4,7 +4,7 @@
 
 Creates a custom renderer. By providing platform-specific node creation and manipulation APIs, you can leverage Vue's core runtime to target non-DOM environments.
 
-- **Type**
+- **Typ**
 
   ```ts
   function createRenderer<HostNode, HostElement>(
@@ -53,7 +53,7 @@ Creates a custom renderer. By providing platform-specific node creation and mani
   }
   ```
 
-- **Example**
+- **Exempel**
 
   ```js
   import { createRenderer } from '@vue/runtime-core'

@@ -4,7 +4,7 @@
 
 This method accepts the same argument as [`defineComponent`](#definecomponent), but instead returns a native [Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) class constructor.
 
-- **Type**
+- **Typ**
 
   ```ts
   function defineCustomElement(
@@ -28,7 +28,7 @@ This method accepts the same argument as [`defineComponent`](#definecomponent), 
 
   > Type is simplified for readability.
 
-- **Details**
+- **Detaljer**
 
   In addition to normal component options, `defineCustomElement()` also supports a number of options that are custom-elements-specific:
 
@@ -54,7 +54,7 @@ This method accepts the same argument as [`defineComponent`](#definecomponent), 
 
   The return value is a custom element constructor that can be registered using [`customElements.define()`](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define).
 
-- **Example**
+- **Exempel**
 
   ```js
   import { defineCustomElement } from 'vue'
@@ -67,7 +67,7 @@ This method accepts the same argument as [`defineComponent`](#definecomponent), 
   customElements.define('my-vue-element', MyVueElement)
   ```
 
-- **See also**
+- **Se även**
 
   - [Guide - Building Custom Elements with Vue](/guide/extras/web-components#building-custom-elements-with-vue)
 

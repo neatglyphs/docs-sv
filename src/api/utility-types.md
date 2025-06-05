@@ -8,7 +8,7 @@ This page only lists a few commonly used utility types that may need explanation
 
 Used to annotate a prop with more advanced types when using runtime props declarations.
 
-- **Example**
+- **Exempel**
 
   ```ts
   import type { PropType } from 'vue'
@@ -30,7 +30,7 @@ Used to annotate a prop with more advanced types when using runtime props declar
   }
   ```
 
-- **See also** [Guide - Typing Component Props](/guide/typescript/options-api#typing-component-props)
+- **Se även** [Guide - Typing Component Props](/guide/typescript/options-api#typing-component-props)
 
 ## MaybeRef\<T> {#mayberef}
 
@@ -50,7 +50,7 @@ Extract prop types from a runtime props options object. The extracted types are 
 
 To extract public facing props, i.e. props that the parent is allowed to pass, use [`ExtractPublicPropTypes`](#extractpublicproptypes).
 
-- **Example**
+- **Exempel**
 
   ```ts
   const propsOptions = {
@@ -81,7 +81,7 @@ To extract public facing props, i.e. props that the parent is allowed to pass, u
 
 Extract prop types from a runtime props options object. The extracted types are public facing - i.e. the props that the parent is allowed to pass.
 
-- **Example**
+- **Exempel**
 
   ```ts
   const propsOptions = {
@@ -110,7 +110,7 @@ Extract prop types from a runtime props options object. The extracted types are 
 
 Used to augment the component instance type to support custom global properties.
 
-- **Example**
+- **Exempel**
 
   ```ts
   import axios from 'axios'
@@ -127,13 +127,13 @@ Used to augment the component instance type to support custom global properties.
   Augmentations must be placed in a module `.ts` or `.d.ts` file. See [Type Augmentation Placement](/guide/typescript/options-api#augmenting-global-properties) for more details.
   :::
 
-- **See also** [Guide - Augmenting Global Properties](/guide/typescript/options-api#augmenting-global-properties)
+- **Se även** [Guide - Augmenting Global Properties](/guide/typescript/options-api#augmenting-global-properties)
 
 ## ComponentCustomOptions {#componentcustomoptions}
 
 Used to augment the component options type to support custom options.
 
-- **Example**
+- **Exempel**
 
   ```ts
   import { Route } from 'vue-router'
@@ -149,13 +149,13 @@ Used to augment the component options type to support custom options.
   Augmentations must be placed in a module `.ts` or `.d.ts` file. See [Type Augmentation Placement](/guide/typescript/options-api#augmenting-global-properties) for more details.
   :::
 
-- **See also** [Guide - Augmenting Custom Options](/guide/typescript/options-api#augmenting-custom-options)
+- **Se även** [Guide - Augmenting Custom Options](/guide/typescript/options-api#augmenting-custom-options)
 
 ## ComponentCustomProps {#componentcustomprops}
 
 Used to augment allowed TSX props in order to use non-declared props on TSX elements.
 
-- **Example**
+- **Exempel**
 
   ```ts
   declare module 'vue' {
@@ -180,7 +180,7 @@ Used to augment allowed TSX props in order to use non-declared props on TSX elem
 
 Used to augment allowed values in style property bindings.
 
-- **Example**
+- **Exempel**
 
   Allow any custom CSS property
 
