@@ -9,22 +9,22 @@ onMounted(() => {
 })
 </script>
 
-# Production Error Code Reference {#error-reference}
+# Referens för felkoder i produktion {#error-reference}
 
-## Runtime Errors {#runtime-errors}
+## Körningsfel {#runtime-errors}
 
-In production builds, the 3rd argument passed to the following error handler APIs will be a short code instead of the full information string:
+I produktionsbyggen kommer det tredje argumentet som skickas till följadne felhanterings-API:er vara en kortkod istället för den fullständiga informationssträngen:
 
 - [`app.config.errorHandler`](/api/application#app-config-errorhandler)
 - [`onErrorCaptured`](/api/composition-api-lifecycle#onerrorcaptured) (Composition API)
 - [`errorCaptured`](/api/options-lifecycle#errorcaptured) (Options API)
 
-The following table maps the codes to their original full information strings.
+Följande tabell visar koderna och de ursprungliga fullständiga informationssträngarna de motsvarar.
 
 <ErrorsTable kind="runtime" :errors="data.runtime" :highlight="highlight" />
 
-## Compiler Errors {#compiler-errors}
+## Kompileringsfel {#compiler-errors}
 
-The following table provides a mapping of the production compiler error codes to their original messages.
+Följande tabell visar en översikt av produktionskompilatorns felkoder och deras ursprungliga meddelanden.
 
 <ErrorsTable kind="compiler" :errors="data.compiler" :highlight="highlight" />
