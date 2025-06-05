@@ -1,28 +1,28 @@
 # vuejs.org
 
-## Contributing
+## Bidra
 
-This site is built with [VitePress](https://github.com/vuejs/vitepress) and depends on [@vue/theme](https://github.com/vuejs/vue-theme). Site content is written in Markdown format located in `src`. For simple edits, you can directly edit the file on GitHub and generate a Pull Request.
+Denna webbplats är byggd med [VitePress](https://github.com/vuejs/vitepress) och är beroende av [@vue/theme](https://github.com/vuejs/vue-theme). Webbplatsens innehåll är skrivet i Markdown-format och finns i `src`. För enklare ändringar kan du redigera filen direkt på GitHub och skapa en pull request.
 
-For local development, [pnpm](https://pnpm.io/) is preferred as package manager:
+För lokal utveckling föredras pakethanteraren [pnpm](https://pnpm.io/):
 
 ```bash
 pnpm i
 pnpm run dev
 ```
 
-This project requires Node.js to be `v18` or higher. And it is recommended to enable corepack:
+Detta projekt kräver Node.js `v18` eller högre. Det är också rekommenderat att aktivera corepack:
 
 ```bash
 corepack enable
 ```
 
-## Working on the content
+## Arbeta med innehållet
 
-- See VitePress docs on supported [Markdown Extensions](https://vitepress.dev/guide/markdown) and the ability to [use Vue syntax inside markdown](https://vitepress.dev/guide/using-vue).
+- Läs VitePress dokumentation om stöd för [Markdown-tillägg](https://vitepress.dev/guide/markdown) och möjligheten att [använda Vue-syntax inuti markdown](https://vitepress.dev/guide/using-vue).
 
-- See the [Writing Guide](https://github.com/vuejs/docs/blob/main/.github/contributing/writing-guide.md) for our rules and recommendations on writing and maintaining documentation content.
+- Läs [Skrivguiden](https://github.com/vuejs/docs/blob/main/.github/contributing/writing-guide.md) för våra regler och rekommendationer om att skriva och underhålla dokumentationsinnehåll.
 
-## Working on the theme
+## Arbeta med temat
 
-If changes need to made for the theme, check out the [instructions for developing the theme alongside the docs](https://github.com/vuejs/vue-theme#developing-with-real-content).
+Om ändringar av temat behöver göras se [instruktionerna för att utveckla temat tillsammans med dokumentationen](https://github.com/vuejs/vue-theme#developing-with-real-content).
