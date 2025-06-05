@@ -1,1 +1,1 @@
-This example demonstrates handling user input with the v-on directive.
+Detta exempel visar hur man hanterar användarinmatning med hjälp av direktivet v-on.

@@ -1,1 +1,1 @@
-We can create two-way bindings between state and form inputs using the v-model directive.
+Vi kan skapa tvåvängsbindningar mellan state och formulärfält med hjälp av direktivet v-model.

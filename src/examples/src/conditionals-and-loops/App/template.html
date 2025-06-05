@@ -1,10 +1,10 @@
-<button @click="show = !show">Toggle List</button>
-<button @click="list.push(list.length + 1)">Push Number</button>
-<button @click="list.pop()">Pop Number</button>
-<button @click="list.reverse()">Reverse List</button>
+<button @click="show = !show">Visa/dölj lista</button>
+<button @click="list.push(list.length + 1)">Skjut in nummer</button>
+<button @click="list.pop()">Ta ur nummer</button>
+<button @click="list.reverse()">Vänd lista</button>
 
 <ul v-if="show && list.length">
   <li v-for="item of list">{{ item }}</li>
 </ul>
-<p v-else-if="list.length">List is not empty, but hidden.</p>
-<p v-else>List is empty.</p>
+<p v-else-if="list.length">Listan är inte tom, men dold.</p>
+<p v-else>Listan är tom.</p>
