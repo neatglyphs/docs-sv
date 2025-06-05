@@ -1,6 +1,6 @@
 ---
 page: true
-title: Tutorial
+title: Guide
 sidebar: false
 aside: false
 footer: false

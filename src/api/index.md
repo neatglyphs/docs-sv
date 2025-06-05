@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: API-referens
 sidebar: false
 page: true
 footer: false
